@@ -1,0 +1,98 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Raleway-40.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/LoginButton.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/ShowPassword.gd" type="Script" id=3]
+[ext_resource path="res://Raleway-20.tres" type="DynamicFont" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 154.0
+margin_bottom = 98.0
+custom_fonts/font = ExtResource( 1 )
+text = "Login"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Notification" type="Label" parent="."]
+margin_left = 50.0
+margin_top = 110.0
+margin_right = 504.0
+margin_bottom = 158.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 0.439216, 0.439216, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 50.0
+margin_top = 475.0
+margin_right = 250.0
+margin_bottom = 563.0
+rect_scale = Vector2( 1, 1.00249 )
+custom_fonts/font = ExtResource( 1 )
+text = "Confirm"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UsernameLabel" type="Label" parent="Button"]
+margin_top = -330.0
+margin_right = 200.0
+margin_bottom = -282.0
+custom_fonts/font = ExtResource( 1 )
+text = "Username"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UsernameInput" type="LineEdit" parent="Button"]
+margin_top = -275.0
+margin_right = 450.0
+margin_bottom = -217.0
+custom_fonts/font = ExtResource( 1 )
+expand_to_text_length = true
+placeholder_text = "Enter Username"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PasswordLabel" type="Label" parent="Button"]
+margin_top = -200.0
+margin_right = 200.0
+margin_bottom = -152.0
+custom_fonts/font = ExtResource( 1 )
+text = "Password"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PasswordInput" type="LineEdit" parent="Button"]
+margin_left = 1.0
+margin_top = -145.0
+margin_right = 451.0
+margin_bottom = -87.0
+custom_fonts/font = ExtResource( 1 )
+secret = true
+expand_to_text_length = true
+placeholder_text = "Enter Password"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShowPassword" type="Button" parent="Button"]
+margin_top = -74.8137
+margin_right = 159.0
+margin_bottom = -29.8137
+custom_fonts/font = ExtResource( 4 )
+text = "Show Password"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

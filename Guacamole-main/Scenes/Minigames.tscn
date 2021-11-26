@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Raleway-40.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/Minigames Button.gd" type="Script" id=2]
+
+[node name="Minigames" type="Node2D"]
+
+[node name="Minigames" type="Control" parent="."]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WhackaMole" type="Node" parent="Minigames"]
+
+[node name="WhackaMoleButton" type="Button" parent="Minigames/WhackaMole"]
+margin_left = 67.8083
+margin_top = 162.144
+margin_right = 358.808
+margin_bottom = 221.144
+custom_fonts/font = ExtResource( 1 )
+text = "Whack-a-Mole"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMatch" type="Node" parent="Minigames"]
+
+[node name="TileMatchButton" type="Button" parent="Minigames/TileMatch"]
+margin_left = 67.8083
+margin_top = 252.144
+margin_right = 358.808
+margin_bottom = 311.144
+custom_fonts/font = ExtResource( 1 )
+text = "TileMatch"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Minigames"]
+margin_left = 368.0
+margin_right = 649.0
+margin_bottom = 65.0
+size_flags_stretch_ratio = 0.0
+custom_fonts/font = ExtResource( 1 )
+text = "Minigames"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Minigames/WhackaMole/WhackaMoleButton" to="Minigames" method="_on_WhackaMoleButton_pressed"]
+[connection signal="pressed" from="Minigames/WhackaMole/WhackaMoleButton" to="Minigames/WhackaMole/WhackaMoleButton" method="_on_Button_pressed"]
+[connection signal="pressed" from="Minigames/TileMatch/TileMatchButton" to="Minigames" method="_on_TileMatchButton_pressed"]
+[connection signal="pressed" from="Minigames/TileMatch/TileMatchButton" to="Minigames" method="_on_WhackaMoleButton_pressed"]
