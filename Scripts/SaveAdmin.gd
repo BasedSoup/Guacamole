@@ -23,3 +23,4 @@ func SaveFile(content):
 
 func _pressed():
 	JSON.print(SaveFile(get_parent().get_child(1).text))
+	#sets the save file contents to the contents of the text editor
