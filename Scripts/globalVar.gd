@@ -5,6 +5,7 @@ extends Node
 # var a = 2
 # var b = "text"
 var user
+signal tilePressed
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -25,6 +26,7 @@ func SaveFile(content):
 	usernamesFile.store_string(content)
 	usernamesFile.close()
 	#function for loading files
+	
 func LoadFile():
 	var usernamesFile = File.new()
 	usernamesFile.open("N:/GuacamoleCFG/save_game.dat", File.READ)

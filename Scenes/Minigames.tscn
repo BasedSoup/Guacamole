@@ -50,6 +50,4 @@ __meta__ = {
 }
 
 [connection signal="pressed" from="Minigames/WhackaMole/WhackaMoleButton" to="Minigames" method="_on_WhackaMoleButton_pressed"]
-[connection signal="pressed" from="Minigames/WhackaMole/WhackaMoleButton" to="Minigames/WhackaMole/WhackaMoleButton" method="_on_Button_pressed"]
-[connection signal="pressed" from="Minigames/TileMatch/TileMatchButton" to="Minigames" method="_on_WhackaMoleButton_pressed"]
 [connection signal="pressed" from="Minigames/TileMatch/TileMatchButton" to="Minigames" method="_on_TileMatchButton_pressed"]

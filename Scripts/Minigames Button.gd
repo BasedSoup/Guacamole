@@ -10,8 +10,8 @@ extends Control
 
 
 func _on_WhackaMoleButton_pressed():
-	get_tree().change_scene("res://Scenes/WhackAMole.tscn")
+	get_tree().change_scene("res://Games/WhackAMole/WhackAMole.tscn")
 
 
 func _on_TileMatchButton_pressed():
-	get_tree().change_scene("res://Scenes/TileMatch.tscn")
+	get_tree().change_scene("res://Games/TileMatch/TileMatch.tscn")
