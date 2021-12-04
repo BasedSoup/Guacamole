@@ -12,4 +12,4 @@ func _ready():
 
 
 func _pressed():
-	GlobalVar.emit_signal("tilePressed", self.Assigned)
+	GlobalVar.emit_signal("tilePressed", self.name)

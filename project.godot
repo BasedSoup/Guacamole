@@ -14,7 +14,6 @@ config/name="Guacamole"
 run/main_scene="res://Scenes/Login.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="Guacamole"
-config/icon="res://icon.png"
 
 [autoload]
 
