@@ -30,7 +30,7 @@ func _pressed():
 	var counter = 0
 	for each in usersJSON["Users"]:
 		if each["Username"] == username:
-			if each["Password"] == password:
+			if each["Password"] == password.sha256_text():
 				if username == "Admin":
 					#redirects admin to admin page
 					get_tree().change_scene("res://Scenes/Admin.tscn")
@@ -45,7 +45,7 @@ func _pressed():
 		#creates a new user
 	get_parent().get_child(1).text="New Account Created"
 	newFile = LoadFile()
-	newFile["Users"].append({"Username":username, "Password":password, "Points":0})
+	newFile["Users"].append({"Username":username, "Password":password.sha256_text(), "Points":0})
 	print(newFile)
 	SaveFile(JSON.print(newFile))
 #function for saving files

@@ -23,5 +23,5 @@ func LoadFile():
 	return content
 
 func _pressed():
-	get_parent().get_child(1).text = JSON.print(LoadFile())
+	get_parent().get_child(1).text = JSON.print(LoadFile(), "\t")
 	#sets the contents of the text editor to the contents of the file.

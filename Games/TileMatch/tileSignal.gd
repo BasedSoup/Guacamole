@@ -1,15 +1,6 @@
 extends TextureButton
 
-export (int) var Assigned
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
+export (int) var Assigned # Assigns a variable to all buttons within the minigame
 
 func _pressed():
-	GlobalVar.emit_signal("tilePressed", self.name)
+	GlobalVar.emit_signal("tilePressed", self.name) # Tells the tile manager script the tile has been selected
