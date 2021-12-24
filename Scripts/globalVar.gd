@@ -7,6 +7,7 @@ extends Node
 const savePath = "D:/Docs/Charlie/GuacamoleCFG/save_game.dat"
 #const path = "N:/GuacamoleCFG/save_game.dat"
 var user
+var animal = "Mole"
 signal tilePressed
 
 # Called when the node enters the scene tree for the first time.
