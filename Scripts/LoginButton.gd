@@ -77,10 +77,10 @@ func _pressed():
 					"Say mean things about Mole3 to fit in"
 				], "CorrectAnswer": 1}},
 			{"Name":"Mole4", "Unlocked":false, "Happy":false, 
-				"Problem":{"Question":"Mole1 was found crying because they dropped their ice cream.", "Answers":[
-					"Tell them to eat it off the ground",
-					"Give them money to buy a new one",
-					"Walk away"
+				"Problem":{"Question":"Mole4 was messing around and broke the teacher's pen. What should you tell them to do?", "Answers":[
+					"Confess to the teacher",
+					"Hide the broken pen",
+					"Blame it on someone else"
 				], "CorrectAnswer": 1}},
 			{"Name":"Mole5", "Unlocked":false, "Happy":false, 
 				"Problem":{"Question":"Mole1 was found crying because they dropped their ice cream.", "Answers":[
