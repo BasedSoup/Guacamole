@@ -2,7 +2,6 @@ extends Node2D
 
 
 func _ready():
-	print(GlobalVar.user)
 	get_child(1).text = str(LoadFile()["Users"][GlobalVar.user]["Points"]) + (' Points')
 	get_child(2).text = ("Welcome!\n") + str(LoadFile()["Users"][GlobalVar.user]["Username"])
 	

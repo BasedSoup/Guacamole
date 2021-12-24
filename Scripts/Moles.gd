@@ -17,6 +17,8 @@ func _ready():
 	for child in range(len(get_children()) - 2):
 		if currentFile["Users"][GlobalVar.user]["Moles"][child]["Unlocked"]:
 			get_child(child).get_child(2).hide()
+		if currentFile["Users"][GlobalVar.user]["Moles"][child]["Happy"]:
+			get_child(child).get_child(3).show()
 		get_child(child).get_child(1).texture = sprites[child]
 	get_child(7).text = str(GlobalVar.LoadScore()) + " Points"
 		
@@ -27,16 +29,17 @@ func _input(event):
 		get_tree().change_scene("res://Scenes/Main.tscn")
 
 func _on_Button_pressed(moleNumber):
-	if get_child(moleNumber-1).get_child(2).visible == true:
-		#buy
-		if GlobalVar.LoadScore() >= 30:
-			currentFile["Users"][GlobalVar.user]["Moles"][moleNumber - 1]["Unlocked"] = true
-			currentFile["Users"][GlobalVar.user]["Points"] -= 30
-			GlobalVar.SaveFile(JSON.print(currentFile))
-			get_child(7).text = str(GlobalVar.LoadScore()) + " Points"
-			get_child(moleNumber - 1).get_child(2).hide()
+	if get_child(moleNumber-1).get_child(3).visible == false:
+		if get_child(moleNumber-1).get_child(2).visible == true:
+			if GlobalVar.LoadScore() >= 30:
+				currentFile["Users"][GlobalVar.user]["Moles"][moleNumber - 1]["Unlocked"] = true
+				currentFile["Users"][GlobalVar.user]["Points"] -= 30
+				GlobalVar.SaveFile(JSON.print(currentFile))
+				get_child(7).text = str(GlobalVar.LoadScore()) + " Points"
+				get_child(moleNumber - 1).get_child(2).hide()
+				
+				
+		else:
+			GlobalVar.selectedMole = moleNumber
+			get_tree().change_scene("res://Moles/Individual/Mole.tscn")
 			
-			
-	else:
-		get_tree().change_scene("res://Moles/Individual/" + str(moleNumber) + "/Mole.tscn")
-		pass

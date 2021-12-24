@@ -53,8 +53,48 @@ func _pressed():
 		#creates a new user
 	get_parent().get_child(1).text="New Account Created"
 	newFile = LoadFile()
-	newFile["Users"].append({"Username":username, "Password":password.sha256_text(), "Points":0, "Moles":[{"Name":"Mole1", "Unlocked":false, "Happy":false}, {"Name":"Mole2", "Unlocked":false, "Happy":false}, {"Name":"Mole3", "Unlocked":false, "Happy":false}, {"Name":"Mole4", "Unlocked":false, "Happy":false}, {"Name":"Mole5", "Unlocked":false, "Happy":false}, {"Name":"Mole6", "Unlocked":false, "Happy":false}]})
-	print(newFile)
+	newFile["Users"].append({
+		"Username":username,
+		"Password":password.sha256_text(),
+		"Points":0, 
+		"Moles":[
+			{"Name":"Mole1", "Unlocked":false, "Happy":false, 
+				"Problem":{"Question":"Mole1 was found crying because they dropped their ice cream.", "Answers":[
+					"Tell them to eat it off the ground",
+					"Give them money to buy a new one",
+					"Walk away"
+				], "CorrectAnswer": 2}},
+			{"Name":"Mole2", "Unlocked":false, "Happy":false, 
+				"Problem":{"Question":"Mole2 is sat alone in the corner of the classroom during break.","Answers":[
+					"Ignore them",
+					"Make fun of them for having no friends",
+					"Ask them if they would like to play with you"
+				], "CorrectAnswer": 3}},
+			{"Name":"Mole3", "Unlocked":false, "Happy":false, 
+				"Problem":{"Question":"You hear people being mean to Mole3.", "Answers":[
+					"Tell a teacher",
+					"Do nothing",
+					"Say mean things about Mole3 to fit in"
+				], "CorrectAnswer": 1}},
+			{"Name":"Mole4", "Unlocked":false, "Happy":false, 
+				"Problem":{"Question":"Mole1 was found crying because they dropped their ice cream.", "Answers":[
+					"Tell them to eat it off the ground",
+					"Give them money to buy a new one",
+					"Walk away"
+				], "CorrectAnswer": 1}},
+			{"Name":"Mole5", "Unlocked":false, "Happy":false, 
+				"Problem":{"Question":"Mole1 was found crying because they dropped their ice cream.", "Answers":[
+					"Tell them to eat it off the ground",
+					"Give them money to buy a new one",
+					"Walk away"
+				], "CorrectAnswer": 3}},
+			{"Name":"Mole6", "Unlocked":false, "Happy":false, 
+				"Problem":{"Question":"Mole1 was found crying because they dropped their ice cream.", "Answers":[
+					"Tell them to eat it off the ground",
+					"Give them money to buy a new one",
+					"Walk away"
+				], "CorrectAnswer": 2}}
+			]})
 	SaveFile(JSON.print(newFile))
 #function for saving files
 func SaveFile(content):
