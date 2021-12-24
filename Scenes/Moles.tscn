@@ -1,8 +1,17 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Raleway-40.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/Moles.gd" type="Script" id=2]
+[ext_resource path="res://Moles/Sprites/Mole1.png" type="Texture" id=3]
+[ext_resource path="res://Moles/Sprites/Mole2.png" type="Texture" id=4]
+[ext_resource path="res://Moles/Sprites/Mole3.png" type="Texture" id=5]
+[ext_resource path="res://Moles/Sprites/Mole5.png" type="Texture" id=6]
+[ext_resource path="res://Moles/Sprites/Mole6.png" type="Texture" id=7]
+[ext_resource path="res://Moles/Sprites/Mole4.png" type="Texture" id=8]
+[ext_resource path="res://Moles/Sprites/ForSale.png" type="Texture" id=9]
 
 [node name="Moles" type="Control"]
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -11,9 +20,9 @@ __meta__ = {
 
 [node name="Button" type="Button" parent="Mole1"]
 margin_left = 12.478
-margin_top = 217.144
+margin_top = 276.144
 margin_right = 303.478
-margin_bottom = 276.144
+margin_bottom = 335.144
 custom_fonts/font = ExtResource( 1 )
 text = "Mole1"
 __meta__ = {
@@ -21,16 +30,20 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Mole1"]
+position = Vector2( 164.049, 158.392 )
+texture = ExtResource( 3 )
 
 [node name="ForSale" type="Sprite" parent="Mole1"]
+position = Vector2( 169.323, 157.706 )
+texture = ExtResource( 9 )
 
 [node name="Mole2" type="Node" parent="."]
 
 [node name="Button" type="Button" parent="Mole2"]
 margin_left = 316.148
-margin_top = 217.144
+margin_top = 276.144
 margin_right = 607.147
-margin_bottom = 276.144
+margin_bottom = 335.144
 custom_fonts/font = ExtResource( 1 )
 text = "Mole2"
 __meta__ = {
@@ -38,16 +51,20 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Mole2"]
+position = Vector2( 482.247, 154.149 )
+texture = ExtResource( 4 )
 
 [node name="ForSale" type="Sprite" parent="Mole2"]
+position = Vector2( 483.011, 153.701 )
+texture = ExtResource( 9 )
 
 [node name="Mole3" type="Node" parent="."]
 
 [node name="Button" type="Button" parent="Mole3"]
 margin_left = 628.473
-margin_top = 217.144
+margin_top = 276.144
 margin_right = 919.473
-margin_bottom = 276.144
+margin_bottom = 335.144
 custom_fonts/font = ExtResource( 1 )
 text = "Mole3"
 __meta__ = {
@@ -55,8 +72,12 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Mole3"]
+position = Vector2( 770.746, 171.12 )
+texture = ExtResource( 5 )
 
 [node name="ForSale" type="Sprite" parent="Mole3"]
+position = Vector2( 768.969, 168.768 )
+texture = ExtResource( 9 )
 
 [node name="Mole4" type="Node" parent="."]
 
@@ -72,8 +93,12 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Mole4"]
+position = Vector2( 176.3, 433.067 )
+texture = ExtResource( 8 )
 
 [node name="ForSale" type="Sprite" parent="Mole4"]
+position = Vector2( 179.333, 432.51 )
+texture = ExtResource( 9 )
 
 [node name="Mole5" type="Node" parent="."]
 
@@ -89,8 +114,12 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Mole5"]
+position = Vector2( 472.347, 428.507 )
+texture = ExtResource( 6 )
 
 [node name="ForSale" type="Sprite" parent="Mole5"]
+position = Vector2( 471.568, 426.457 )
+texture = ExtResource( 9 )
 
 [node name="Mole6" type="Node" parent="."]
 
@@ -106,8 +135,12 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Mole6"]
+position = Vector2( 773.575, 432.749 )
+texture = ExtResource( 7 )
 
 [node name="ForSale" type="Sprite" parent="Mole6"]
+position = Vector2( 775.485, 434.704 )
+texture = ExtResource( 9 )
 
 [node name="Label" type="Label" parent="."]
 margin_left = 368.0

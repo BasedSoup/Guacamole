@@ -20,6 +20,14 @@ func _ready():
 #func _process(delta):
 #	pass
 #checks if button is pressed
+
+func _input(event):
+	if event.is_action_pressed("back"):
+		get_tree().quit()
+	
+	elif event.is_action_pressed("enter"):
+		_pressed()
+
 func _pressed():
 	#gets user info
 	username = get_child(1).text
@@ -31,11 +39,11 @@ func _pressed():
 	for each in usersJSON["Users"]:
 		if each["Username"] == username:
 			if each["Password"] == password.sha256_text():
+				GlobalVar.user = counter
 				if username == "Admin":
 					#redirects admin to admin page
 					get_tree().change_scene("res://Scenes/Admin.tscn")
 					return
-				GlobalVar.user = counter
 				#redirects user to main screen
 				get_tree().change_scene("res://Scenes/Main.tscn")
 				return
@@ -45,20 +53,20 @@ func _pressed():
 		#creates a new user
 	get_parent().get_child(1).text="New Account Created"
 	newFile = LoadFile()
-	newFile["Users"].append({"Username":username, "Password":password.sha256_text(), "Points":0})
+	newFile["Users"].append({"Username":username, "Password":password.sha256_text(), "Points":0, "Moles":[{"Name":"Mole1", "Unlocked":false, "Happy":false}, {"Name":"Mole2", "Unlocked":false, "Happy":false}, {"Name":"Mole3", "Unlocked":false, "Happy":false}, {"Name":"Mole4", "Unlocked":false, "Happy":false}, {"Name":"Mole5", "Unlocked":false, "Happy":false}, {"Name":"Mole6", "Unlocked":false, "Happy":false}]})
 	print(newFile)
 	SaveFile(JSON.print(newFile))
 #function for saving files
 func SaveFile(content):
 	var usernamesFile = File.new()
-	usernamesFile.open("N:/GuacamoleCFG/save_game.dat", File.WRITE)
+	usernamesFile.open(GlobalVar.savePath, File.WRITE)
 #	usernamesFile.open("user://save_game.dat", File.WRITE)
 	usernamesFile.store_string(content)
 	usernamesFile.close()
 	#function for loading files
 func LoadFile():
 	var usernamesFile = File.new()
-	usernamesFile.open("N:/GuacamoleCFG/save_game.dat", File.READ)
+	usernamesFile.open(GlobalVar.savePath, File.READ)
 #	usernamesFile.open("user://save_game.dat", File.READ)
 	var content = JSON.parse(usernamesFile.get_as_text()).result
 	usernamesFile.close()

@@ -8,7 +8,7 @@ func _ready():
 	
 func LoadFile():
 	var usernamesFile = File.new()
-	usernamesFile.open("N:/GuacamoleCFG/save_game.dat", File.READ)
+	usernamesFile.open(GlobalVar.savePath, File.READ)
 #	usernamesFile.open("user://save_game.dat", File.READ)
 	var content = JSON.parse(usernamesFile.get_as_text()).result
 	usernamesFile.close()
@@ -18,9 +18,12 @@ func LoadFile():
 
 
 func _on_Moles_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://Scenes/Moles.tscn")
 
 
 func _on_Minigames_pressed():
 	get_tree().change_scene("res://Scenes/Minigames.tscn")
-	pass # Replace with function body.
+
+func _input(event):
+	if event.is_action_pressed("back"):
+		get_tree().change_scene("res://Scenes/Login.tscn")

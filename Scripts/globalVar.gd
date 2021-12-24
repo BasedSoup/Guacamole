@@ -4,6 +4,8 @@ extends Node
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+const savePath = "D:/Docs/Charlie/GuacamoleCFG/save_game.dat"
+#const path = "N:/GuacamoleCFG/save_game.dat"
 var user
 signal tilePressed
 
@@ -21,7 +23,7 @@ func SaveScore(points):
 	
 func SaveFile(content):
 	var usernamesFile = File.new()
-	usernamesFile.open("N:/GuacamoleCFG/save_game.dat", File.WRITE)
+	usernamesFile.open(savePath, File.WRITE)
 #	usernamesFile.open("user://save_game.dat", File.WRITE)
 	usernamesFile.store_string(content)
 	usernamesFile.close()
@@ -29,7 +31,7 @@ func SaveFile(content):
 	
 func LoadFile():
 	var usernamesFile = File.new()
-	usernamesFile.open("N:/GuacamoleCFG/save_game.dat", File.READ)
+	usernamesFile.open(savePath, File.READ)
 #	usernamesFile.open("user://save_game.dat", File.READ)
 	var content = JSON.parse(usernamesFile.get_as_text()).result
 	usernamesFile.close()

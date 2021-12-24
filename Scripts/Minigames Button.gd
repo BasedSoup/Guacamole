@@ -15,3 +15,7 @@ func _on_WhackaMoleButton_pressed():
 
 func _on_TileMatchButton_pressed():
 	get_tree().change_scene("res://Games/TileMatch/TileMatch.tscn")
+
+func _input(event):
+	if event.is_action_pressed("back"):
+		get_tree().change_scene("res://Scenes/Main.tscn")

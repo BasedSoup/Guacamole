@@ -25,3 +25,6 @@ func _pressed(): #registers mouse interaction with mole
 		GlobalVar.SaveScore(1) # increase score
 		get_parent().get_parent().get_child(1).text = str(GlobalVar.LoadScore()) + (' Points') #changes scoreboard
 
+func _input(event):
+	if event.is_action_pressed("back"):
+		get_tree().change_scene("res://Scenes/Minigames.tscn")

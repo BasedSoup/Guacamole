@@ -17,7 +17,7 @@ func _ready():
 func SaveFile(content):
 	var usernamesFile = File.new()
 #	usernamesFile.open("user://save_game.dat", File.WRITE)
-	usernamesFile.open("N:/GuacamoleCFG/save_game.dat", File.WRITE)
+	usernamesFile.open(GlobalVar.savePath, File.WRITE)
 	usernamesFile.store_string(content)
 	usernamesFile.close()
 

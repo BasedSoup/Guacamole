@@ -84,3 +84,7 @@ func finishCheck():
 		totalScore = 0
 	GlobalVar.SaveScore(25+totalScore) # Saves user's score using a previously written function
 	get_tree().change_scene("res://Scenes/Main.tscn") # Returns to main screen
+
+func _input(event):
+	if event.is_action_pressed("back"):
+		get_tree().change_scene("res://Scenes/Minigames.tscn")
