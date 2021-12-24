@@ -1,0 +1,122 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Raleway-40.tres" type="DynamicFont" id=1]
+
+[node name="Moles" type="Control"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mole1" type="Node" parent="."]
+
+[node name="Button" type="Button" parent="Mole1"]
+margin_left = 12.478
+margin_top = 217.144
+margin_right = 303.478
+margin_bottom = 276.144
+custom_fonts/font = ExtResource( 1 )
+text = "Mole1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Mole1"]
+
+[node name="ForSale" type="Sprite" parent="Mole1"]
+
+[node name="Mole2" type="Node" parent="."]
+
+[node name="Button" type="Button" parent="Mole2"]
+margin_left = 316.148
+margin_top = 217.144
+margin_right = 607.147
+margin_bottom = 276.144
+custom_fonts/font = ExtResource( 1 )
+text = "Mole2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Mole2"]
+
+[node name="ForSale" type="Sprite" parent="Mole2"]
+
+[node name="Mole3" type="Node" parent="."]
+
+[node name="Button" type="Button" parent="Mole3"]
+margin_left = 628.473
+margin_top = 217.144
+margin_right = 919.473
+margin_bottom = 276.144
+custom_fonts/font = ExtResource( 1 )
+text = "Mole3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Mole3"]
+
+[node name="ForSale" type="Sprite" parent="Mole3"]
+
+[node name="Mole4" type="Node" parent="."]
+
+[node name="Button" type="Button" parent="Mole4"]
+margin_left = 12.478
+margin_top = 529.162
+margin_right = 303.478
+margin_bottom = 588.162
+custom_fonts/font = ExtResource( 1 )
+text = "Mole4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Mole4"]
+
+[node name="ForSale" type="Sprite" parent="Mole4"]
+
+[node name="Mole5" type="Node" parent="."]
+
+[node name="Button" type="Button" parent="Mole5"]
+margin_left = 316.148
+margin_top = 529.162
+margin_right = 607.147
+margin_bottom = 588.162
+custom_fonts/font = ExtResource( 1 )
+text = "Mole5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Mole5"]
+
+[node name="ForSale" type="Sprite" parent="Mole5"]
+
+[node name="Mole6" type="Node" parent="."]
+
+[node name="Button" type="Button" parent="Mole6"]
+margin_left = 628.473
+margin_top = 529.162
+margin_right = 919.473
+margin_bottom = 588.162
+custom_fonts/font = ExtResource( 1 )
+text = "Mole6"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Mole6"]
+
+[node name="ForSale" type="Sprite" parent="Mole6"]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 368.0
+margin_right = 649.0
+margin_bottom = 65.0
+size_flags_stretch_ratio = 0.0
+custom_fonts/font = ExtResource( 1 )
+text = "Minigames"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
