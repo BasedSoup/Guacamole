@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Raleway-40.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/Settings.gd" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_top = 50.0
+margin_right = 1024.0
+margin_bottom = 98.0
+custom_fonts/font = ExtResource( 1 )
+text = "Settings"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_top = 192.0
+margin_right = 288.0
+margin_bottom = 256.0
+custom_fonts/font = ExtResource( 1 )
+text = "Volume:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Volume" type="HSlider" parent="Label2"]
+margin_left = 288.0
+margin_top = 8.0
+margin_right = 544.0
+margin_bottom = 64.0
+max_value = 1.0
+step = 0.1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_top = 320.0
+margin_right = 288.0
+margin_bottom = 384.0
+custom_fonts/font = ExtResource( 1 )
+text = "Characters:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Label3"]
+margin_left = 288.0
+margin_right = 544.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 1 )
+text = "Moles"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="value_changed" from="Label2/Volume" to="." method="_on_Volume_value_changed"]
+[connection signal="pressed" from="Label3/Button" to="." method="_on_Animal_pressed"]

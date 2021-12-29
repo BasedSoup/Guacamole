@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Games/TileMatch/Tiles/Blank.png" type="Texture" id=1]
 [ext_resource path="res://Games/TileMatch/Tiles.gd" type="Script" id=2]
 [ext_resource path="res://Raleway-40.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Games/TileMatch/tileSignal.gd" type="Script" id=4]
+[ext_resource path="res://Games/TileMatch/click.mp3" type="AudioStream" id=5]
 
 [node name="Node2D" type="Node2D"]
 
@@ -168,3 +169,6 @@ custom_fonts/font = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )

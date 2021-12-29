@@ -40,6 +40,8 @@ func _pressed():
 		if each["Username"] == username:
 			if each["Password"] == password.sha256_text():
 				GlobalVar.user = counter
+				GlobalVar.animal = each["Settings"]["Animal"]
+				GlobalVar.volume = each["Settings"]["Volume"]
 				if username == "Admin":
 					#redirects admin to admin page
 					get_tree().change_scene("res://Scenes/Admin.tscn")
@@ -83,18 +85,18 @@ func _pressed():
 					"Blame it on someone else"
 				], "CorrectAnswer": 1}},
 			{"Name":"Mole5", "Unlocked":false, "Happy":false, 
-				"Problem":{"Question":"Mole1 was found crying because they dropped their ice cream.", "Answers":[
-					"Tell them to eat it off the ground",
-					"Give them money to buy a new one",
-					"Walk away"
+				"Problem":{"Question":"Mole5 feels sick, what should you do?", "Answers":[
+					"Ignore them, it's not your problem",
+					"Stay away, you don't want to catch anything",
+					"Find a teacher and ask for help"
 				], "CorrectAnswer": 3}},
 			{"Name":"Mole6", "Unlocked":false, "Happy":false, 
-				"Problem":{"Question":"Mole1 was found crying because they dropped their ice cream.", "Answers":[
-					"Tell them to eat it off the ground",
-					"Give them money to buy a new one",
-					"Walk away"
+				"Problem":{"Question":"You win your local football game and the opponents are sad.", "Answers":[
+					"Make fun of them and call them rubbish",
+					"Tell them they played well",
+					"Laugh with your friends from a distance about it"
 				], "CorrectAnswer": 2}}
-			]})
+			], "Settings":{"Animal":"Mole", "Volume":1}})
 	SaveFile(JSON.print(newFile))
 #function for saving files
 func SaveFile(content):

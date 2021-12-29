@@ -26,3 +26,7 @@ func _on_Minigames_pressed():
 func _input(event):
 	if event.is_action_pressed("back"):
 		get_tree().change_scene("res://Scenes/Login.tscn")
+
+
+func _on_Settings_pressed():
+	get_tree().change_scene("res://Scenes/Settings.tscn")

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/click.mp3-9391d9b84abbb0b78fc8b8d4018c4a49.mp3str"
+
+[deps]
+
+source_file="res://Games/TileMatch/click.mp3"
+dest_files=[ "res://.import/click.mp3-9391d9b84abbb0b78fc8b8d4018c4a49.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

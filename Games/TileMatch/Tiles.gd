@@ -57,6 +57,8 @@ func buttonPressed(buttonName): # Checks whether a button has been pressed
 		var button = get_node(buttonName) 
 		button.disabled = true
 		clicked.append(buttonName)
+		get_parent().get_child(2).play()
+	
 
 		
 	

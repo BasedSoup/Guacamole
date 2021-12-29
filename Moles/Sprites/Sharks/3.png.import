@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/6.png-58bfb4cdde676dba1a80e8e9d3f3e829.stex"
+path="res://.import/3.png-899e187b382e7c2ce87923c3f697ea68.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Moles/Sprites/Mole/6.png"
-dest_files=[ "res://.import/6.png-58bfb4cdde676dba1a80e8e9d3f3e829.stex" ]
+source_file="res://Moles/Sprites/Sharks/3.png"
+dest_files=[ "res://.import/3.png-899e187b382e7c2ce87923c3f697ea68.stex" ]
 
 [params]
 
