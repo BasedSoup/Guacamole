@@ -1,6 +1,6 @@
 extends Control
 
-var moleNumber = GlobalVar.selectedMole
+var moleNumber = GlobalVar.selectedMole # Loads the sprite for the mole character
 var sprite = load("res://Moles/Sprites/" + GlobalVar.animal + "/"+str(moleNumber)+".png")
 
 
@@ -9,7 +9,7 @@ var moleData = saveFile["Users"][GlobalVar.user]["Moles"][moleNumber - 1]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_child(0).texture = sprite
+	get_child(0).texture = sprite # Creates the multiple choice section of the mole part of the solution
 	get_child(1).text = moleData["Name"]
 	get_child(2).text = moleData["Problem"]["Answers"][0]
 	get_child(3).text = moleData["Problem"]["Answers"][1]
@@ -23,7 +23,7 @@ func _input(event):
 
 
 
-func _ButtonPressed(answer):
+func _ButtonPressed(answer): # Checks if the correct answer has been clicked
 	if moleData["Problem"]["CorrectAnswer"] == answer:
 		saveFile["Users"][GlobalVar.user]["Moles"][moleNumber - 1]["Happy"] = true
 	else:

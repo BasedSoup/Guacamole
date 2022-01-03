@@ -1,6 +1,6 @@
 extends Node
 
-var sprites = [
+var sprites = [ # Loads each mole's sprites
 	load("res://Moles/Sprites/" + GlobalVar.animal + "/1.png"),
 	load("res://Moles/Sprites/" + GlobalVar.animal + "/2.png"),
 	load("res://Moles/Sprites/" + GlobalVar.animal + "/3.png"),
@@ -13,7 +13,7 @@ var sprites = [
 var currentFile = GlobalVar.LoadFile()
 
 
-func _ready():
+func _ready(): # Shows which moles are unlocked and which moles are happy
 	for child in range(len(get_children()) - 2):
 		if currentFile["Users"][GlobalVar.user]["Moles"][child]["Unlocked"]:
 			get_child(child).get_child(2).hide()
@@ -24,11 +24,11 @@ func _ready():
 		
 
 
-func _input(event):
+func _input(event): # Allows the user to press Escape to go back
 	if event.is_action_pressed("back"):
 		get_tree().change_scene("res://Scenes/Main.tscn")
 
-func _on_Button_pressed(moleNumber):
+func _on_Button_pressed(moleNumber): # Allows the user to unlock a new mole using the points they have collected
 	if get_child(moleNumber-1).get_child(3).visible == false:
 		if get_child(moleNumber-1).get_child(2).visible == true:
 			if GlobalVar.LoadScore() >= 30:
@@ -40,6 +40,6 @@ func _on_Button_pressed(moleNumber):
 				
 				
 		else:
-			GlobalVar.selectedMole = moleNumber
+			GlobalVar.selectedMole = moleNumber # Switches to the page containing the mole
 			get_tree().change_scene("res://Moles/Individual/Mole.tscn")
 			
