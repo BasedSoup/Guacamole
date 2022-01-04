@@ -24,6 +24,7 @@ func _pressed(): #registers mouse interaction with mole
 		self.disabled = true #if mole is shown then hide
 		GlobalVar.SaveScore(1) # increase score
 		get_parent().get_parent().get_child(1).text = str(GlobalVar.LoadScore()) + (' Points') #changes scoreboard
+		get_parent().get_child(7).play()
 
 func _input(event):
 	if event.is_action_pressed("back"):
