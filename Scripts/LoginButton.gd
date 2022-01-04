@@ -96,7 +96,7 @@ func _pressed():
 					"Tell them they played well",
 					"Laugh with your friends from a distance about it"
 				], "CorrectAnswer": 2}}
-			], "Settings":{"Animal":"Mole", "Volume":1}})
+			], "Settings":{"Animal":"Moles", "Volume":1}})
 	SaveFile(JSON.print(newFile))
 #function for saving files
 func SaveFile(content):

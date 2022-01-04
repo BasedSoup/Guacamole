@@ -19,3 +19,8 @@ func _on_TileMatchButton_pressed():
 func _input(event):
 	if event.is_action_pressed("back"):
 		get_tree().change_scene("res://Scenes/Main.tscn")
+
+func _ready():
+	for mole in GlobalVar.LoadFile()['Users'][GlobalVar.user]['Moles']:
+		if mole['Happy']:
+			self.get_child(1).get_child(0).visible = true
