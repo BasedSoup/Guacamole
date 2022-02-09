@@ -4,8 +4,10 @@ extends Node
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-const savePath = "N:/GuacamoleCFG/save_game.dat"
-#const path = "N:/GuacamoleCFG/save_game.dat"
+
+#const savePath = "N:/GuacamoleCFG/save_game.dat"
+const savePath = "D:/Docs/Charlie/GuacamoleCFG/save_game.dat"
+
 var user
 var selectedMole
 var animal
