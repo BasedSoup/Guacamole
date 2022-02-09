@@ -15,6 +15,9 @@ func _on_WhackaMoleButton_pressed():
 
 func _on_TileMatchButton_pressed():
 	get_tree().change_scene("res://Games/TileMatch/TileMatch.tscn")
+	
+func _on_WordleButton_pressed():
+	get_tree().change_scene("res://Games/Wordle/Wordle.tscn")
 
 func _input(event):
 	if event.is_action_pressed("back"):
@@ -24,3 +27,4 @@ func _ready():
 	for mole in GlobalVar.LoadFile()['Users'][GlobalVar.user]['Moles']:
 		if mole['Happy']:
 			self.get_child(1).get_child(0).visible = true
+

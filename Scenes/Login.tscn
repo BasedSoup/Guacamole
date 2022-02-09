@@ -55,8 +55,9 @@ __meta__ = {
 [node name="UsernameInput" type="LineEdit" parent="Button"]
 anchor_left = -0.00471939
 anchor_right = -0.00471939
+margin_left = -0.056122
 margin_top = -275.0
-margin_right = 450.0
+margin_right = 449.944
 margin_bottom = -217.0
 custom_fonts/font = ExtResource( 1 )
 expand_to_text_length = true
@@ -77,9 +78,9 @@ __meta__ = {
 
 [node name="PasswordInput" type="LineEdit" parent="Button"]
 margin_left = 1.0
-margin_top = -145.0
+margin_top = -146.057
 margin_right = 451.0
-margin_bottom = -87.0
+margin_bottom = -88.0568
 custom_fonts/font = ExtResource( 1 )
 secret = true
 expand_to_text_length = true

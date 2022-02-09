@@ -27,13 +27,25 @@ __meta__ = {
 [node name="TileMatch" type="Node" parent="Minigames"]
 
 [node name="TileMatchButton" type="Button" parent="Minigames/TileMatch"]
-visible = false
 margin_left = 67.8083
 margin_top = 252.144
 margin_right = 358.808
 margin_bottom = 311.144
 custom_fonts/font = ExtResource( 1 )
 text = "TileMatch"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wordle" type="Node" parent="Minigames"]
+
+[node name="WordleButton" type="Button" parent="Minigames/Wordle"]
+margin_left = 649.0
+margin_top = 162.144
+margin_right = 940.0
+margin_bottom = 221.144
+custom_fonts/font = ExtResource( 1 )
+text = "Wordle"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -52,3 +64,4 @@ __meta__ = {
 
 [connection signal="pressed" from="Minigames/WhackaMole/WhackaMoleButton" to="Minigames" method="_on_WhackaMoleButton_pressed"]
 [connection signal="pressed" from="Minigames/TileMatch/TileMatchButton" to="Minigames" method="_on_TileMatchButton_pressed"]
+[connection signal="pressed" from="Minigames/Wordle/WordleButton" to="Minigames" method="_on_WordleButton_pressed"]
