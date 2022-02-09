@@ -27,6 +27,7 @@ __meta__ = {
 [node name="TileMatch" type="Node" parent="Minigames"]
 
 [node name="TileMatchButton" type="Button" parent="Minigames/TileMatch"]
+visible = false
 margin_left = 67.8083
 margin_top = 252.144
 margin_right = 358.808
@@ -40,6 +41,7 @@ __meta__ = {
 [node name="Wordle" type="Node" parent="Minigames"]
 
 [node name="WordleButton" type="Button" parent="Minigames/Wordle"]
+visible = false
 margin_left = 649.0
 margin_top = 162.144
 margin_right = 940.0

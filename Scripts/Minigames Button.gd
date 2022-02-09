@@ -24,7 +24,11 @@ func _input(event):
 		get_tree().change_scene("res://Scenes/Main.tscn")
 
 func _ready():
+	var happyMoles = 0
 	for mole in GlobalVar.LoadFile()['Users'][GlobalVar.user]['Moles']:
 		if mole['Happy']:
-			self.get_child(1).get_child(0).visible = true
-
+			happyMoles += 1
+	if happyMoles > 0:
+		self.get_child(1).get_child(0).visible = true
+	if happyMoles > 1:
+		self.get_child(2).get_child(0).visible = true
