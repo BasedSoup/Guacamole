@@ -598,3 +598,546 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Label" type="Label" parent="."]
+margin_left = 160.0
+margin_right = 944.0
+margin_bottom = 128.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = ExtResource( 1 )
+text = "WORDLE"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Alphabet" type="Control" parent="."]
+margin_left = 640.0
+margin_top = 64.0
+margin_right = 960.0
+margin_bottom = 443.0
+rect_pivot_offset = Vector2( -454.503, 190.153 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="A" type="Sprite" parent="Alphabet"]
+position = Vector2( 35.2, 19.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/A"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "A"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="B" type="Sprite" parent="Alphabet"]
+position = Vector2( 83.2, 19.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/B"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "B"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="C" type="Sprite" parent="Alphabet"]
+position = Vector2( 131.2, 19.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/C"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "C"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="D" type="Sprite" parent="Alphabet"]
+position = Vector2( 179.2, 19.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/D"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "D"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="E" type="Sprite" parent="Alphabet"]
+position = Vector2( 227.2, 19.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/E"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "E"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="F" type="Sprite" parent="Alphabet"]
+position = Vector2( 275.2, 19.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/F"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "F"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="G" type="Sprite" parent="Alphabet"]
+position = Vector2( 35.2, 67.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/G"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "G"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="H" type="Sprite" parent="Alphabet"]
+position = Vector2( 83.2, 67.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/H"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "H"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="I" type="Sprite" parent="Alphabet"]
+position = Vector2( 131.2, 67.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/I"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "I"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="J" type="Sprite" parent="Alphabet"]
+position = Vector2( 179.2, 67.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/J"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "J"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="K" type="Sprite" parent="Alphabet"]
+position = Vector2( 227.2, 67.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/K"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "K"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="L" type="Sprite" parent="Alphabet"]
+position = Vector2( 275.2, 67.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/L"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "L"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="M" type="Sprite" parent="Alphabet"]
+position = Vector2( 35.2, 115.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/M"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "M"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="N" type="Sprite" parent="Alphabet"]
+position = Vector2( 83.2, 115.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/N"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "N"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="O" type="Sprite" parent="Alphabet"]
+position = Vector2( 131.2, 115.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/O"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "O"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="P" type="Sprite" parent="Alphabet"]
+position = Vector2( 179.2, 115.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/P"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "P"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Q" type="Sprite" parent="Alphabet"]
+position = Vector2( 227.2, 115.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/Q"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "Q"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="R" type="Sprite" parent="Alphabet"]
+position = Vector2( 275.2, 115.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/R"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "R"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="S" type="Sprite" parent="Alphabet"]
+position = Vector2( 35.2, 163.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/S"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "S"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="T" type="Sprite" parent="Alphabet"]
+position = Vector2( 83.2, 163.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/T"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "T"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="U" type="Sprite" parent="Alphabet"]
+position = Vector2( 131.2, 163.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/U"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "U"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="V" type="Sprite" parent="Alphabet"]
+position = Vector2( 179.2, 163.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/V"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "V"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="W" type="Sprite" parent="Alphabet"]
+position = Vector2( 227.2, 163.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/W"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "W"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="X" type="Sprite" parent="Alphabet"]
+position = Vector2( 275.2, 163.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/X"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "X"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Y" type="Sprite" parent="Alphabet"]
+position = Vector2( 131.2, 211.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/Y"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "Y"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Z" type="Sprite" parent="Alphabet"]
+position = Vector2( 179.2, 211.2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label1" type="Label" parent="Alphabet/Z"]
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "Z"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label2" type="Label" parent="Alphabet"]
+margin_left = 16.0
+margin_top = -64.0
+margin_right = 716.0
+margin_bottom = 96.0
+rect_scale = Vector2( 0.4, 0.4 )
+custom_fonts/font = ExtResource( 1 )
+text = "LETTERS"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Answer" type="Label" parent="."]
+margin_left = 576.0
+margin_top = 448.0
+margin_right = 1024.0
+margin_bottom = 600.0
+custom_fonts/font = ExtResource( 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

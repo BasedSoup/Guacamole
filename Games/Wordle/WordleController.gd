@@ -22,16 +22,21 @@ func _ready():
 	
 	wordList = wordListFile.get_as_text().split("\n")
 	
+	print(randomWord)
+	
 func _input(event):
-	if won:
-		return
 	if event is InputEventKey and event.pressed and not event.echo:
+		if event.scancode == KEY_ESCAPE:
+			get_tree().change_scene("res://Scenes/Minigames.tscn")
+		elif won:
+			return
 		match event.scancode:
 			KEY_ENTER:
 				if letter == 5:
 					var guessWord = get_child(word).get_child(0).get_child(0).text + get_child(word).get_child(1).get_child(0).text + get_child(word).get_child(2).get_child(0).text + get_child(word).get_child(3).get_child(0).text + get_child(word).get_child(4).get_child(0).text
 					if guessWord == randomWord.to_upper():
 						won = true
+						GlobalVar.SaveScore(10*(10-word))
 						print("You win")
 					if guessWord.to_lower() in wordList:
 						var yellows = yellowLettters(toArray(randomWord.to_upper()), toArray(guessWord))
@@ -39,22 +44,23 @@ func _input(event):
 						for wordLetter in range(5):
 							if get_child(word).get_child(wordLetter).get_child(0).text == randomWord[wordLetter].to_upper():
 								get_child(word).get_child(wordLetter).material = correctShader
+								alphabetColours(get_child(word).get_child(wordLetter).get_child(0).text, "green")
 							else:
 								get_child(word).get_child(wordLetter).material = incorrectShader
+								alphabetColours(get_child(word).get_child(wordLetter).get_child(0).text, "grey")
 						for yellowLetter in yellows:
 							get_child(word).get_child(yellowLetter).material = yellowShader
+							alphabetColours(get_child(word).get_child(yellowLetter).get_child(0).text, "yellow")
 						if word < 5:
 							word += 1
 						else:
-							print(randomWord)
+							get_child(8).text = randomWord.to_upper()
 							won = true
 						letter = 0
 			KEY_BACKSPACE:
 				if letter != 0:
 					letter -= 1
 					get_child(word).get_child(letter).get_child(0).text = ""
-			KEY_ESCAPE:
-				get_tree().change_scene("res://Scenes/Minigames.tscn")
 			KEY_A:
 				if letter != 5:
 					get_child(word).get_child(letter).get_child(0).text = "A"
@@ -167,10 +173,10 @@ func yellowLettters(inputWord, guessedWord):
 			guessedWord[_char] = '_'
 			inputWord[_char] = '-'
 	for _char in range(5):
-		for character in range(5):
-			if guessedWord[_char] == inputWord[character]:
+		for inputChar in range(5):
+			if guessedWord[_char] == inputWord[inputChar]:
 				yellows.append(_char)
-				inputWord[character] = '-'
+				inputWord[inputChar] = '-'
 	return yellows
 
 
@@ -179,3 +185,16 @@ func toArray(_inp):
 	for c in _inp:
 		newArray.append(c)
 	return newArray
+	
+func alphabetColours(_let, _colour):
+	get_child(7).get_node(_let)
+	match _colour:
+		"grey":
+			if get_child(7).get_node(_let).material == null:
+				get_child(7).get_node(_let).material = incorrectShader
+		"yellow":
+			if get_child(7).get_node(_let).material != correctShader:
+				get_child(7).get_node(_let).material = yellowShader
+		"green":
+			get_child(7).get_node(_let).material = correctShader
+		
