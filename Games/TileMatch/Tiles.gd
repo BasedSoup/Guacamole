@@ -12,6 +12,7 @@ var tile4 = preload("res://Games/TileMatch/Tiles/4.png")
 var tile5 = preload("res://Games/TileMatch/Tiles/5.png")
 var active = false
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 		if len(clicked) >= 2: # Checks whether two tiles have been selected
